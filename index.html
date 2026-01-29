@@ -12,7 +12,6 @@
     <meta name="theme-color" content="#DC592B">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- Preconexão e DNS Prefetch -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -30,13 +29,9 @@
     <!-- ============================================== -->
     <!-- 2. SEO E META TAGS (BLINDAGEM CONTRA REPRESENTAÇÃO ENGANOSA) -->
     <!-- ============================================== -->
-    <!-- Removido "Oficial" e substituído por "Portal Autorizado" para compliance de afiliados -->
     <title>Virnex Diet™ | Portal de Informações e Ofertas Autorizadas (Desconto Disponível)</title>
     <meta name="description" content="Portal de informações sobre Virnex Diet™. Conheça a fórmula à base de plantas desenvolvida para suporte ao gerenciamento de peso. Resultados podem variar.">
     
-    <!-- ============================================== -->
-    <!-- 3. ESTILOS CUSTOMIZADOS -->
-    <!-- ============================================== -->
     <link rel="icon" type="image/jpeg" href="images/faviconV2.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -51,23 +46,26 @@
         html { scroll-behavior: smooth; }
         
         /* Modal Style */
-        .modal-body h1, .modal-body h2 { font-weight: 900; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #111; }
-        .modal-body p { margin-bottom: 1rem; color: #444; }
+        .modal-body h1 { font-size: 1.5rem; font-weight: 900; margin-bottom: 1rem; color: #111; text-transform: uppercase; }
+        .modal-body h2 { font-size: 1.25rem; font-weight: 800; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #DC592B; }
+        .modal-body h3 { font-size: 1.1rem; font-weight: 700; margin-top: 1rem; margin-bottom: 0.25rem; }
+        .modal-body p { margin-bottom: 1rem; color: #444; line-height: 1.6; }
+        .modal-body ul { list-style: disc; margin-left: 1.5rem; margin-bottom: 1rem; color: #444; }
 
         /* Cookie Banner */
-        #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; z-index: 1000; box-shadow: 0 -5px 25px rgba(0,0,0,0.1); border-top: 3px solid #DC592B; }
+        #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; z-index: 1000; box-shadow: 0 -5px 25px rgba(0,0,0,0.1); border-top: 3px solid #DC592B; transition: all 0.3s ease; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
 
-    <!-- COOKIE CONSENT BANNER (OBRIGATÓRIO PARA UE/GOOGLE 2026) -->
+    <!-- BANNER DE CONSENTIMENTO DE COOKIES (ESSENCIAL PARA GOOGLE 2026) -->
     <div id="cookie-banner" class="p-4 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4 hidden">
-        <div class="text-xs text-gray-600 max-w-3xl">
-            Respeitamos sua privacidade. Este portal utiliza cookies para melhorar sua experiência e analisar o tráfego. 
-            Ao continuar, você concorda com nossa <button onclick="openModal('privacidade')" class="underline">Política de Privacidade</button>.
+        <div class="text-[10px] md:text-xs text-gray-600 max-w-4xl text-center md:text-left">
+            Este portal de informações utiliza cookies para otimizar sua experiência e analisar o tráfego de acordo com as normas de transparência. 
+            Ao continuar navegando, você aceita nossa <button onclick="openModal('privacidade')" class="underline font-bold">Política de Privacidade</button>.
         </div>
         <div class="flex gap-2 w-full md:w-auto">
-            <button onclick="acceptCookies()" class="flex-1 md:flex-none bg-brand-primary text-white px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest">Aceitar</button>
+            <button onclick="acceptCookies()" class="flex-1 md:flex-none bg-brand-primary text-white px-8 py-2 rounded-lg text-xs font-black uppercase tracking-widest shadow-lg">Aceitar e Continuar</button>
         </div>
     </div>
 
@@ -95,12 +93,12 @@
                     <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                         <img src="images/Virnex_logo.png" alt="Virnex Diet Portal" class="h-8 md:h-10 w-auto">
                     </div>
-                    <button onclick="scrollToSelector()" class="hidden md:block bg-white text-brand-primary px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Verificar Ofertas</button>
+                    <button onclick="scrollToSelector()" class="hidden md:block bg-white text-brand-primary px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm hover:bg-gray-100 transition">Verificar Ofertas</button>
                 </div>
             </header>
         </div>
 
-        <!-- SEÇÃO HERO (LIMPEZA DE CLAIMS) -->
+        <!-- SEÇÃO HERO -->
         <main class="px-5 pt-8 pb-12 lg:px-16 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div class="lg:col-span-5 order-2 lg:order-1">
                 <div class="relative max-w-[420px] mx-auto lg:max-w-full">
@@ -132,7 +130,7 @@
                     </li>
                     <li class="flex items-start gap-3 text-gray-700">
                         <i class="fas fa-check-circle text-brand-primary mt-1"></i>
-                        <span class="text-sm">Garantia de 60 dias diretamente com o fabricante</span>
+                        <span class="text-sm">Garantia de satisfação protegida diretamente pelo fabricante</span>
                     </li>
                 </ul>
 
@@ -140,11 +138,11 @@
                     Verificar disponibilidade no site oficial
                     <i class="fas fa-chevron-right ml-2"></i>
                 </button>
-                <p class="mt-4 text-[10px] text-gray-400 italic">*Os resultados variam de pessoa para pessoa e dependem de hábitos saudáveis.</p>
+                <p class="mt-4 text-[10px] text-gray-400 italic">*Os resultados variam de pessoa para pessoa e dependem da adoção de hábitos saudáveis.</p>
             </div>
         </main>
 
-        <!-- DECISÃO (BLINDAGEM CONTRA BRIDGE PAGE) -->
+        <!-- DECISÃO -->
         <section id="region-selector" class="py-20 px-5 bg-gray-50/50 border-y border-gray-100">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Qual o seu objetivo hoje?</h2>
@@ -152,7 +150,6 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- COMPRA DIRETA -->
                 <div class="bg-white rounded-3xl shadow-xl border border-gray-200 p-8 flex flex-col">
                     <h3 class="text-xl font-black mb-4 uppercase">1. Ir para a Loja Oficial</h3>
                     <p class="text-gray-600 text-sm mb-8 flex-1 italic">
@@ -163,7 +160,6 @@
                     </button>
                 </div>
 
-                <!-- QUIZ EEAT -->
                 <div class="bg-white rounded-3xl shadow-xl border-2 border-brand-primary p-8 flex flex-col">
                     <h3 class="text-xl font-black mb-4 uppercase">2. Avaliação de Compatibilidade</h3>
                     <p class="text-gray-600 text-sm mb-8 flex-1 italic">
@@ -180,11 +176,10 @@
         <footer class="bg-white border-t border-gray-100 pt-16 pb-12 px-5 mt-auto">
             <div class="max-w-5xl mx-auto text-center">
                 
-                <!-- SEÇÃO QUEM SOMOS (EEAT) -->
                 <div class="mb-12 text-left bg-gray-50 p-6 rounded-2xl border border-gray-200">
                     <h4 class="text-sm font-black mb-2 text-gray-900 uppercase">Sobre este Portal Informativo</h4>
                     <p class="text-xs text-gray-600 leading-relaxed">
-                        Este site é um portal de notícias e resenhas independente dedicado ao bem-estar e saúde. Atuamos como distribuidores e afiliados autorizados. Nossa missão é oferecer informações detalhadas para que o consumidor faça escolhas conscientes. <strong>Observação:</strong> Recebemos uma comissão por vendas realizadas através de nossos links, o que não altera o preço final para você.
+                        Este site é um portal de notícias e resenhas independente dedicado ao bem-estar e saúde. Atuamos como distribuidores e afiliados autorizados. Nossa missão é oferecer informações detalhadas para que o consumidor faça escolhas conscientes. <strong>Observação:</strong> Recebemos uma comissão por vendas realizadas através de nossos links, o que não altera o preço final para você e nos permite manter a qualidade informativa do portal.
                     </p>
                 </div>
 
@@ -196,16 +191,16 @@
                 </div>
                 
                 <nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-                    <button onclick="openModal('envio')" class="hover:text-brand-primary transition">Políticas de Envio</button>
-                    <button onclick="openModal('termos')" class="hover:text-brand-primary transition">Termos</button>
-                    <button onclick="openModal('privacidade')" class="hover:text-brand-primary transition">Privacidade</button>
-                    <button onclick="openModal('contato')" class="hover:text-brand-primary transition">Atendimento</button>
+                    <button onclick="openModal('envio')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary transition">Envio e Devolução</button>
+                    <button onclick="openModal('termos')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary transition">Termos de Uso</button>
+                    <button onclick="openModal('privacidade')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary transition">Privacidade</button>
+                    <button onclick="openModal('contato')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary transition">Suporte</button>
                 </nav>
 
                 <div class="max-w-4xl mx-auto text-[9px] text-gray-400 leading-relaxed space-y-4">
                     <p><strong>Aviso Legal Obrigatório:</strong> O conteúdo deste site não substitui aconselhamento médico profissional. Sempre consulte seu médico antes de iniciar qualquer suplementação. As informações e produtos não se destinam a diagnosticar, tratar ou curar doenças.</p>
                     <p><strong>Identidade Jurídica:</strong> VIVELLO SOLUTIONS LTD | Tax ID: GB-DE61BX | 7 Compton Street, Ashbourne, Derbyshire, Reino Unido, DE6 1BX | support@getvirnex.com</p>
-                    <p>© 2026 Virnex® Partner Network. Este site não é parte do Google Inc. ou Facebook Inc.</p>
+                    <p>© 2026 Virnex® Partner Network. Este site não é parte do Google Inc. ou Facebook Inc. FACEBOOK é uma marca registrada da Meta Platforms, Inc. GOOGLE é uma marca registrada da Google LLC.</p>
                 </div>
             </div>
         </footer>
@@ -225,15 +220,49 @@
         const DTC_URL = "https://smck0.doctorfoxick.com/l";
         const VSL_URL = "https://zgcef.doctormedved.com/l";
 
+        // POLÍTICAS INTEGRADAS (AUDITADAS PELO COMPLIANCE)
+        const policies = {
+            'envio': `
+                <h1>Políticas de Envio, Devolução e Reembolso</h1>
+                <h2>1. Envio e Entrega</h2>
+                <h3>1.1 Prazos</h3>
+                <p>Todos os pedidos são processados em 1 a 3 dias úteis. A entrega geralmente leva de 2 a 14 dias úteis. Você receberá um e-mail com link de rastreamento.</p>
+                <h3>1.2 Custos</h3>
+                <p>Os custos de envio são exibidos na finalização da compra. Impostos alfandegários são de responsabilidade do cliente.</p>
+                <h2>2. Devoluções e Reembolsos</h2>
+                <h3>2.1 Garantia de 60 Dias</h3>
+                <p>Se você não estiver satisfeito após receber o produto, poderá solicitar o reembolso em até 60 dias. Você pode experimentar até dois frascos conforme a garantia. Garrafas adicionais devem estar lacradas.</p>
+                <p><strong>Endereço de Devolução:</strong> Shipbob, Kanaalzone 2, Havenweg 16, 6006 SM Weert, Holanda.</p>
+            `,
+            'termos': `
+                <h1>Termos e Condições Gerais</h1>
+                <p>Estes termos regem o uso do portal fornecido pela Vivello Solutions Ltd. Ao navegar, você aceita estas condições de uso informativo.</p>
+                <p>O idioma oficial do contrato é o alemão, sendo as versões em outros idiomas para fins informativos. O foro competente é Frankfurt am Main para transações comerciais na UE.</p>
+            `,
+            'privacidade': `
+                <h1>Política de Privacidade</h1>
+                <p>Respeitamos a LGPD e GDPR. Coletamos nome, endereço e e-mail apenas para processamento de pedidos. Não armazenamos dados de cartão de crédito diretamente.</p>
+                <p>Você tem o direito de visualizar, corrigir ou excluir seus dados a qualquer momento entrando em contato com nosso suporte.</p>
+            `,
+            'contato': `
+                <h1>Atendimento ao Cliente</h1>
+                <p>Nossa equipe está disponível de segunda a sexta, das 9h às 18h GMT.</p>
+                <p><strong>E-mail:</strong> support@getvirnex.com</p>
+                <p><strong>Telefone:</strong> +49 40 7430 2972</p>
+                <p><strong>Endereço:</strong> VIVELLO SOLUTIONS LTD, 7 Compton Street, Ashbourne, Derbyshire, Reino Unido, DE6 1BX</p>
+            `
+        };
+
         // COOKIE BANNER LOGIC
         if(!localStorage.getItem('cookies-accepted')) {
-            document.getElementById('cookie-banner').classList.remove('hidden');
+            setTimeout(() => { document.getElementById('cookie-banner').classList.remove('hidden'); }, 1000);
         }
         function acceptCookies() {
             localStorage.setItem('cookies-accepted', 'true');
             document.getElementById('cookie-banner').classList.add('hidden');
         }
 
+        // TIMER
         function startTimer(duration, display) {
             let timer = duration, minutes, seconds;
             setInterval(function () {
@@ -262,11 +291,12 @@
         function openModal(type) {
             const modal = document.getElementById('info-modal');
             const content = document.getElementById('modal-content');
-            // Conteúdo simplificado para exemplo (Manter os textos originais do usuário no sistema real)
-            content.innerHTML = `<h2>Informação de Compliance</h2><p>Você está acessando as políticas do Portal Virnex Diet Partner. Todos os dados seguem a LGPD/GDPR e as normas do Google Ads 2026.</p>`;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
+            if(policies[type]) {
+                content.innerHTML = policies[type];
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         window.onclick = function(e) { if(e.target.id == 'info-modal') closeModal(); }
