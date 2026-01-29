@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
 <head>
     <!-- ============================================== -->
     <!-- 1. PERFORMANCE TÉCNICA E RASTREAMENTO -->
@@ -30,16 +30,16 @@
     <!-- ============================================== -->
     <!-- 2. SEO E META TAGS CORE -->
     <!-- ============================================== -->
-    <title>Virnex Diet™ Official | Realistic Weight Management (73% OFF)</title>
-    <meta name="description" content="Order Virnex Diet™ directly from the official store. A carefully developed, plant-based formula for realistic weight management. EU Shipping & 60-Day Guarantee.">
+    <title>Virnex Diet™ Oficial | Gerenciamento de Peso Realista (73% OFF)</title>
+    <meta name="description" content="Peça Virnex Diet™ diretamente na loja oficial. Uma fórmula à base de plantas desenvolvida cuidadosamente para um gerenciamento de peso realista.">
     <link rel="canonical" href="https://tryvitality.vercel.app/">
 
-    <!-- Social Media & Open Graph -->
+    <!-- Redes Sociais & Open Graph -->
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://tryvitality.vercel.app/">
-    <meta property="og:site_name" content="Virnex Diet™ Official Store">
-    <meta property="og:title" content="Virnex Diet™ - Realistic Weight Management Formula">
-    <meta property="og:description" content="When weight loss becomes frustrating, motivation disappears. Discover Virnex®, the plant-based approach to sustainable results.">
+    <meta property="og:site_name" content="Virnex Diet™ Loja Oficial">
+    <meta property="og:title" content="Virnex Diet™ - Fórmula de Gerenciamento de Peso Realista">
+    <meta property="og:description" content="Quando a perda de peso se torna frustrante, a motivação desaparece. Descubra Virnex®.">
     <meta property="og:image" content="images/Virnex.png">
     
     <!-- ============================================== -->
@@ -52,7 +52,7 @@
     
     <style>
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        /* COR DA MARCA: #DC592B */
+        /* COR DA MARCA PRINCIPAL: #DC592B */
         .text-brand-primary { color: #DC592B; }
         .bg-brand-primary { background-color: #DC592B; }
         .border-brand-primary { border-color: #DC592B; }
@@ -69,6 +69,12 @@
         .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .faq-item.active .faq-content { max-height: 500px; }
         .faq-item.active .faq-icon { transform: rotate(180deg); }
+
+        /* Estilização básica para o conteúdo do modal */
+        .modal-body h1, .modal-body h2 { font-weight: 900; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #111; }
+        .modal-body h3 { font-weight: 700; margin-top: 1.25rem; margin-bottom: 0.5rem; color: #333; }
+        .modal-body p { margin-bottom: 1rem; color: #444; }
+        .modal-body ul { list-style: disc; margin-left: 1.5rem; margin-bottom: 1rem; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
@@ -77,31 +83,30 @@
         
         <!-- CABEÇALHO FIXO -->
         <div class="sticky top-0 z-50 w-full bg-white shadow-sm overflow-hidden">
-            <!-- 1. Barra de Garantias -->
+            <!-- 1. Barra de Garantias Superior -->
             <div class="bg-gray-50 py-1.5 px-2 border-b border-gray-100">
                 <div class="flex justify-center items-center gap-4 md:gap-8 text-[10px] sm:text-xs font-bold text-gray-600 uppercase">
-                    <div class="flex items-center gap-1.5"><i class="fas fa-check-circle text-brand-primary"></i> IN STOCK</div>
-                    <div class="flex items-center gap-1.5"><i class="fas fa-truck text-brand-primary"></i> EU SHIPPING</div>
-                    <div class="flex items-center gap-1.5"><i class="fas fa-undo text-brand-primary"></i> 60-DAY MONEY-BACK</div>
+                    <div class="flex items-center gap-1.5"><i class="fas fa-check-circle text-brand-primary"></i> EM ESTOQUE</div>
+                    <div class="flex items-center gap-1.5"><i class="fas fa-truck text-brand-primary"></i> ENVIO UE</div>
+                    <div class="flex items-center gap-1.5"><i class="fas fa-undo text-brand-primary"></i> 60 DIAS DE GARANTIA</div>
                 </div>
             </div>
 
-            <!-- 2. Barra de Oferta Especial com Timer -->
+            <!-- 2. Barra de Oferta Especial com Temporizador -->
             <div class="bg-black text-white text-center py-2 px-4">
                 <p class="text-[11px] sm:text-xs font-black uppercase tracking-widest flex items-center justify-center gap-3">
-                    <span>LIMITED TIME: 73% DISCOUNT APPLIED</span>
+                    <span>OFERTA LIMITADA: 73% DE DESCONTO APLICADO</span>
                     <span id="countdown" class="bg-brand-primary px-2 py-0.5 rounded text-white font-mono">14:59</span>
                 </p>
             </div>
 
-            <!-- 3. Logo Header (Fundo Laranja para Logo Branco) -->
+            <!-- 3. Header Principal -->
             <header class="py-4 px-5 md:px-8 bg-brand-primary border-b border-orange-600">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                        <img src="images/Virnex_logo.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" alt="Virnex Diet Logo" class="h-8 md:h-10 w-auto">
-                        <span style="display:none" class="text-2xl font-black text-white">Virnex <span class="opacity-80 font-normal">Diet</span></span>
+                        <img src="images/Virnex_logo.png" alt="Virnex Diet Logo" class="h-8 md:h-10 w-auto">
                     </div>
-                    <button onclick="scrollToSelector()" class="hidden md:block bg-white text-brand-primary px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gray-100 transition shadow-sm">Claim Discount</button>
+                    <button onclick="scrollToSelector()" class="hidden md:block bg-white text-brand-primary px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gray-100 transition shadow-sm">Obter Desconto</button>
                 </div>
             </header>
         </div>
@@ -111,51 +116,36 @@
             
             <!-- Imagem do Produto -->
             <div class="lg:col-span-5 order-2 lg:order-1">
-                <div class="relative max-w-[400px] mx-auto lg:max-w-full">
-                    <div class="absolute -top-4 -left-4 bg-black text-white w-20 h-20 rounded-full flex flex-col items-center justify-center font-black shadow-lg z-10 animate-bounce">
-                        <span class="text-lg">73%</span>
-                        <span class="text-[10px] -mt-1 uppercase">OFF</span>
+                <div class="relative max-w-[420px] mx-auto lg:max-w-full">
+                    <div class="w-full bg-white flex items-center justify-center overflow-hidden">
+                         <img src="images/Virnex.png" alt="Virnex Diet" class="w-full h-auto drop-shadow-2xl transform hover:scale-105 transition duration-500">
                     </div>
-                    
-                    <div class="w-full aspect-[4/5] bg-gray-50 rounded-2xl flex items-center justify-center overflow-hidden border border-gray-100 shadow-inner">
-                         <img src="images/Virnex.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" alt="Virnex Diet Bottle" class="w-full h-auto drop-shadow-2xl transform hover:scale-105 transition duration-500">
-                         <div style="display:none" class="flex flex-col items-center text-gray-300">
-                             <i class="fas fa-prescription-bottle text-8xl mb-2"></i>
-                             <span class="font-bold">Virnex Diet</span>
-                         </div>
-                    </div>
-                    <div class="mt-6 flex justify-center gap-4">
-                        <img src="images/selos-eu.png" onerror="this.src='https://via.placeholder.com/200x50?text=German+Quality+Standards'" class="h-10 w-auto opacity-80" alt="Certificates">
+                    <div class="mt-8 flex justify-center gap-4">
+                        <img src="images/selos-eu.png" onerror="this.style.display='none'" class="h-10 w-auto opacity-80" alt="Certificados de Qualidade">
                     </div>
                 </div>
             </div>
 
             <!-- Cópia de Vendas -->
-            <div class="lg:col-span-7 order-1 lg:order-2">
+            <div class="lg:col-span-7 order-1 lg:order-2 text-center lg:text-left">
                 <div class="inline-flex items-center bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-[10px] lg:text-xs font-bold mb-4 border border-gray-200 uppercase tracking-wide">
-                    <i class="fas fa-info-circle mr-2 text-brand-primary"></i> In Stock · EU Shipping · 60-Day Money-Back Guarantee
+                    <i class="fas fa-info-circle mr-2 text-brand-primary"></i> Em estoque · Envio UE · 60 dias de garantia
                 </div>
                 
-                <h1 class="text-3xl lg:text-5xl font-black leading-tight text-gray-900 mb-6">
+                <h1 class="text-3xl lg:text-5xl font-black leading-tight text-gray-900 mb-6 tracking-tight">
                     When Weight Loss Becomes Frustrating, <br class="hidden lg:block"> <span class="text-brand-primary underline decoration-gray-100">Motivation Disappears.</span>
                 </h1>
 
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl">
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                     Virnex® is a carefully developed, plant-based formula designed for people who want a more realistic and controlled approach to weight management — without extreme diets, harsh stimulants, or unrealistic promises.
                 </p>
 
-                <ul class="space-y-4 mb-10">
+                <ul class="space-y-4 mb-10 text-left">
                     <li class="flex items-center gap-3 text-gray-700">
                         <div class="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-check text-[10px] text-brand-primary"></i>
                         </div>
                         <span class="font-medium">Supports gradual and sustainable weight reduction</span>
-                    </li>
-                    <li class="flex items-center gap-3 text-gray-700">
-                        <div class="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-check text-[10px] text-brand-primary"></i>
-                        </div>
-                        <span class="font-medium">Designed for everyday routines — no drastic lifestyle changes</span>
                     </li>
                     <li class="flex items-center gap-3 text-gray-700">
                         <div class="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center flex-shrink-0">
@@ -167,24 +157,18 @@
                         <div class="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-check text-[10px] text-brand-primary"></i>
                         </div>
-                        <span class="font-medium">No unnecessary additives or aggressive ingredients</span>
-                    </li>
-                    <li class="flex items-center gap-3 text-gray-700">
-                        <div class="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-check text-[10px] text-brand-primary"></i>
-                        </div>
                         <span class="font-medium">60-day risk-free money-back guarantee</span>
                     </li>
                 </ul>
 
-                <button onclick="scrollToSelector()" class="w-full lg:w-auto bg-brand-primary text-white px-10 py-5 rounded-xl text-xl font-black shadow-xl cta-pulse hover-bg-brand-primary transition transform active:scale-95 flex items-center justify-center gap-3 uppercase tracking-tight">
-                    Start Your Path Today
+                <button onclick="scrollToSelector()" class="w-full lg:w-auto bg-brand-primary text-white px-12 py-5 rounded-xl text-xl font-black shadow-xl cta-pulse hover-bg-brand-primary transition transform active:scale-95 flex items-center justify-center gap-3 uppercase tracking-tight">
+                    Começar Hoje Mesmo
                     <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
         </main>
 
-        <!-- SEÇÃO DE ESCOLHA (DTC vs QUIZ) -->
+        <!-- SEÇÃO DE ESCOLHA -->
         <section id="region-selector" class="py-20 px-5 scroll-mt-24 bg-gray-50/50 border-y border-gray-100">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">How would you like to begin?</h2>
@@ -192,76 +176,35 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- OPÇÃO 1: DTC (Compra Direta) -->
+                <!-- OPÇÃO 1: COMPRA DIRETA -->
                 <div class="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden flex flex-col transform transition hover:shadow-2xl">
                     <div class="bg-gray-100 text-gray-500 text-center py-2 font-bold uppercase text-[10px] tracking-widest border-b">
-                        Option 1 — Direct Purchase
+                        Opção 1 — Compra Direta
                     </div>
                     <div class="p-8 flex flex-col h-full">
-                        <h3 class="text-2xl font-black mb-4 uppercase text-gray-900">Start the Program</h3>
+                        <h3 class="text-2xl font-black mb-4 uppercase text-gray-900">1. Iniciar Programa</h3>
                         <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-1">
-                            Choose this option if you already know what you want. You’ll get immediate access to the full Virnex® program with EU delivery, secure checkout, and a 60-day money-back guarantee. Ideal for people who prefer a simple, direct purchase without extra steps.
+                            If you’ve already decided, you can proceed directly to a secure checkout. One-time payment, EU shipping, and a full 60-day satisfaction guarantee included.
                         </p>
-                        
-                        <div class="mb-8 space-y-3 text-xs text-gray-500">
-                            <div class="flex items-center gap-2"><i class="fas fa-shipping-fast text-brand-primary"></i> Fast EU delivery</div>
-                            <div class="flex items-center gap-2"><i class="fas fa-lock text-brand-primary"></i> Encrypted checkout</div>
-                            <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-brand-primary"></i> Full 60-day satisfaction guarantee</div>
-                        </div>
-
                         <button onclick="goToOffer()" class="w-full bg-brand-primary text-white py-4 rounded-xl font-black text-lg hover-bg-brand-primary transition shadow-md uppercase">
-                            Go to Store
+                            Ir para Loja
                         </button>
                     </div>
                 </div>
 
-                <!-- OPÇÃO 2: QUIZ (Decisão Guiada) -->
+                <!-- OPÇÃO 2: QUIZ -->
                 <div class="bg-white rounded-3xl shadow-xl border-2 border-brand-primary overflow-hidden flex flex-col transform transition hover:shadow-2xl relative">
                     <div class="bg-brand-primary text-white text-center py-2 font-black uppercase text-[10px] tracking-widest">
-                        Option 2 — Guided Decision
+                        Opção 2 — Decisão Guiada
                     </div>
                     <div class="p-8 flex flex-col h-full">
-                        <h3 class="text-2xl font-black mb-4 uppercase text-gray-900">Is Virnex® Right for You?</h3>
+                        <h3 class="text-2xl font-black mb-4 uppercase text-gray-900">2. Virnex® é para você?</h3>
                         <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-1">
-                            Not sure yet? This short assessment helps determine whether Virnex® fits your goals, routine, and expectations. It takes less than 2 minutes and gives you a personalized recommendation — with no obligation and no pressure to buy.
+                            Answer a few simple questions to receive a tailored recommendation based on your needs. It takes less than 2 minutes — with no obligation.
                         </p>
-
-                        <div class="mb-8 space-y-3 text-xs text-gray-500">
-                            <div class="flex items-center gap-2"><i class="fas fa-clock text-brand-primary"></i> Less than 2 minutes</div>
-                            <div class="flex items-center gap-2"><i class="fas fa-user-check text-brand-primary"></i> Tailored recommendation</div>
-                            <div class="flex items-center gap-2"><i class="fas fa-check-circle text-brand-primary"></i> Informed, well-considered decision</div>
-                        </div>
-
                         <button onclick="goToInfo()" class="w-full border-2 border-brand-primary text-brand-primary py-4 rounded-xl font-black text-lg hover:bg-gray-50 transition uppercase">
-                            Check Compatibility
+                            Verificar Compatibilidade
                         </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO FAQ -->
-        <section class="py-16 px-5 bg-white">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-black text-center mb-10 uppercase tracking-tight">Frequently Asked Questions</h2>
-                <div class="space-y-4">
-                    <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
-                        <div class="p-5 flex justify-between items-center font-bold text-gray-900">
-                            How does Virnex Diet support weight management?
-                            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
-                        </div>
-                        <div class="faq-content p-5 pt-0 text-gray-600 text-sm">
-                            Virnex® uses a blend of plant-based extracts that support metabolic health and help maintain a balanced energy level, making it easier to stick to your goals without the frustration of "crashes."
-                        </div>
-                    </div>
-                    <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
-                        <div class="p-5 flex justify-between items-center font-bold text-gray-900">
-                            Are there any aggressive stimulants?
-                            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
-                        </div>
-                        <div class="faq-content p-5 pt-0 text-gray-600 text-sm">
-                            No. Our formula is designed for adult, daily use. It avoids the harsh stimulants found in many "hype" products, focusing instead on sustainable and logical support.
-                        </div>
                     </div>
                 </div>
             </div>
@@ -277,27 +220,29 @@
                     <p class="text-xs font-black text-gray-400 uppercase tracking-widest">Virnex Diet™</p>
                 </div>
                 
-                <nav class="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-10 text-[11px] font-bold text-gray-400 uppercase tracking-widest">
-                    <button onclick="openModal('privacy')" class="hover:text-brand-primary transition">Privacy Policy</button>
-                    <button onclick="openModal('terms')" class="hover:text-brand-primary transition">Terms of Service</button>
-                    <button onclick="openModal('shipping')" class="hover:text-brand-primary transition">EU Shipping</button>
-                    <button onclick="openModal('returns')" class="hover:text-brand-primary transition">Returns</button>
-                    <button onclick="openModal('contact')" class="hover:text-brand-primary transition">Support</button>
+                <nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 text-[11px] font-bold text-gray-500 uppercase tracking-widest">
+                    <button onclick="openModal('envio')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary hover:bg-gray-100 transition">Políticas de Envio e Devolução</button>
+                    <button onclick="openModal('termos')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary hover:bg-gray-100 transition">Termos e Condições</button>
+                    <button onclick="openModal('privacidade')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary hover:bg-gray-100 transition">Política de Privacidade</button>
+                    <button onclick="openModal('contato')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary hover:bg-gray-100 transition">Contate-nos</button>
                 </nav>
 
-                <div class="max-w-3xl mx-auto text-[10px] text-gray-400 leading-relaxed">
-                    <p class="mb-4"><strong>Disclaimer:</strong> Weight management results vary by individual. This product is intended to be used in conjunction with a balanced diet and healthy lifestyle. Produced in facilities meeting EU and German quality standards.</p>
-                    <p>© 2026 Virnex® Global Distributor. All rights reserved.</p>
+                <div class="max-w-3xl mx-auto text-[10px] text-gray-400 leading-relaxed space-y-4">
+                    <p><strong>Aviso Médico:</strong> Os resultados do gerenciamento de peso variam de indivíduo para indivíduo. Este produto deve ser utilizado em conjunto com uma dieta equilibrada e um estilo de vida saudável. Produzido em instalações que cumprem as normas de qualidade da UE e da Alemanha.</p>
+                    <p>© 2026 Virnex® Global Distributor. Todos os direitos reservados.</p>
+                    <p class="text-[9px] opacity-60 uppercase tracking-tighter">VIVELLO SOLUTIONS LTD, 7 Compton Street, Ashbourne, Derbyshire, Reino Unido, DE6 1BX</p>
                 </div>
             </div>
         </footer>
 
-        <!-- MODAL UNIVERSAL -->
-        <div id="info-modal" class="fixed inset-0 bg-black/60 z-[100] hidden items-center justify-center p-4 backdrop-blur-sm">
-            <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden">
-                <div class="p-8 overflow-y-auto text-gray-700 text-sm leading-relaxed" id="modal-content"></div>
-                <div class="p-4 bg-gray-50 flex justify-end">
-                    <button onclick="closeModal()" class="bg-brand-primary text-white px-8 py-2 rounded-lg font-bold">Close</button>
+        <!-- MODAL DE INFORMAÇÃO -->
+        <div id="info-modal" class="fixed inset-0 bg-black/70 z-[100] hidden items-center justify-center p-4 backdrop-blur-md">
+            <div class="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden animate-fade-in">
+                <div class="p-8 md:p-12 overflow-y-auto modal-body" id="modal-content">
+                    <!-- Conteúdo injetado via JS -->
+                </div>
+                <div class="p-6 bg-gray-50 border-t flex justify-end">
+                    <button onclick="closeModal()" class="bg-brand-primary text-white px-10 py-3 rounded-xl font-black uppercase tracking-widest text-sm hover-bg-brand-primary transition">Fechar</button>
                 </div>
             </div>
         </div>
@@ -308,7 +253,65 @@
         const DTC_URL = "https://smck0.doctorfoxick.com/l";
         const VSL_URL = "https://zgcef.doctormedved.com/l";
 
-        // TIMER DE CONTAGEM REGRESSIVA
+        // CONTEÚDO DAS POLÍTICAS
+        const policies = {
+            'envio': `
+                <h1>Políticas de Envio, Devolução e Reembolso</h1>
+                <h2>1. Envio e Entrega</h2>
+                <h3>1.1 Prazos de Processamento e Entrega</h3>
+                <p>Todos os pedidos são processados em 1 a 3 dias úteis. A entrega geralmente leva de 2 a 14 dias úteis, dependendo do destino. Assim que seu pedido for enviado, você receberá um e-mail de confirmação com um link de rastreamento para acompanhar sua encomenda.</p>
+                <h3>1.2 Custos de Envio e Taxas Alfandegárias</h3>
+                <p>Os custos de envio são calculados e exibidos na finalização da compra. Observação: os impostos alfandegários e as taxas de importação são de responsabilidade do cliente e não são cobertos pela Vivello Solutions.</p>
+                
+                <h2>2. Alterações e Cancelamentos</h2>
+                <h3>2.1 Cancelamento de Pedidos</h3>
+                <p>Os pedidos podem ser cancelados dentro de um prazo após a sua realização, desde que ainda não tenham sido processados, etiquetados ou enviados. Para solicitar um cancelamento, envie um e-mail para <strong>support@getvirnex.com</strong>.</p>
+                
+                <h2>3. Devoluções e Reembolsos</h2>
+                <h3>3.1 Direito de Devolução</h3>
+                <p><strong>Garantia de reembolso de 60 dias:</strong> Se você não estiver satisfeito após receber o produto, estará protegido pela nossa garantia de reembolso de 60 dias. Se não estiver satisfeito com os resultados, entre em contato conosco dentro de 60 dias após a compra.</p>
+                <p><strong>Para receber um reembolso integral:</strong></p>
+                <ul>
+                    <li>Não é permitido abrir/utilizar mais de duas garrafas (suprimento máximo para dois meses).</li>
+                    <li>Todas as garrafas adicionais devem permanecer lacradas.</li>
+                    <li>Todas as garrafas vazias devem ser devolvidas.</li>
+                    <li>Os custos de envio não são reembolsáveis.</li>
+                </ul>
+                <h3>3.2 Processo de Devolução</h3>
+                <p>Entre em contato conosco pelo e-mail <strong>support@getvirnex.com</strong> antes de devolver o produto para receber seu número de identificação de devolução (RMA). Sem esse número, não poderemos processar sua devolução.</p>
+                <p><strong>Endereço para devoluções:</strong> Shipbob, Kanaalzone 2, Havenweg 16, 6006 SM Weert, Holanda.</p>
+            `,
+            'termos': `
+                <h1>Termos e Condições Gerais</h1>
+                <p>Estes termos e condições aplicam-se a todos os contratos, entregas e outros serviços prestados pela Vivello Solutions Ltd., 7 Compton Street, Ashbourne, Derbyshire, GB-DE61BX, Reino Unido.</p>
+                <h3>Conclusão do Contrato</h3>
+                <p>O vendedor oferece diversos produtos novos, principalmente suplementos nutricionais, para compra em sua loja online. As ofertas são direcionadas exclusivamente a clientes na UE e no Reino Unido.</p>
+                <h3>Preços e Pagamento</h3>
+                <p>Os preços acordados aplicam-se, incluindo o IVA legal, mais os custos de envio. A entrega é feita mediante pagamento antecipado.</p>
+                <h3>Reserva de Propriedade</h3>
+                <p>Os bens permanecem propriedade do vendedor até que o pagamento integral seja recebido.</p>
+            `,
+            'privacidade': `
+                <h1>Política de Privacidade</h1>
+                <p>Esta política aplica-se aos dados pessoais recolhidos no website de propriedade ou controlado pela Vivello Solutions Ltd. O objetivo desta política é informá-lo sobre como utilizamos os dados pessoais que recolhemos.</p>
+                <h3>Dados Coletados</h3>
+                <p>Se desejar se cadastrar ou fazer uma compra, coletaremos os seguintes dados pessoais: nome, endereço, número de telefone e endereço de e-mail. Também mantemos um registro de transações financeiras.</p>
+                <h3>Uso dos Dados</h3>
+                <p>Os dados pessoais que coletamos nos permitem fornecer os produtos e serviços que você solicitou e verificar sua identidade.</p>
+                <h3>Segurança</h3>
+                <p>Implementamos medidas técnicas e organizacionais adequadas para proteger seus dados pessoais contra perda acidental e acesso não autorizado.</p>
+            `,
+            'contato': `
+                <h1>Contate-nos</h1>
+                <p>Nossos especialistas em produtos e gerentes de atendimento ao cliente estão prontos para responder às suas perguntas e solucionar suas dúvidas.</p>
+                <p>Nossa equipe de atendimento ao cliente está disponível de segunda a sexta-feira, das 9h às 18h GMT.</p>
+                <h3>Informações de Contato</h3>
+                <p><strong>E-mail:</strong> support@getvirnex.com</p>
+                <p><strong>Telefone:</strong> +49 40 7430 2972</p>
+                <p><strong>Endereço:</strong> VIVELLO SOLUTIONS LTD, 7 Compton Street, Ashbourne, Derbyshire, Reino Unido, DE6 1BX</p>
+            `
+        };
+
         function startTimer(duration, display) {
             let timer = duration, minutes, seconds;
             setInterval(function () {
@@ -337,15 +340,25 @@
         function openModal(type) {
             const modal = document.getElementById('info-modal');
             const content = document.getElementById('modal-content');
-            content.innerHTML = `<h2 class="text-2xl font-black mb-6 uppercase text-gray-900 border-b pb-4">${type.replace('_',' ')}</h2><p class="mb-4">This is the official informational page for Virnex® regarding our <strong>${type.replace('_',' ')}</strong> policies.</p><p>We are dedicated to providing a transparent, logical approach to weight management for our customers in the EU and worldwide.</p>`;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+            if(policies[type]) {
+                content.innerHTML = policies[type];
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         function closeModal() {
             const modal = document.getElementById('info-modal');
             modal.classList.add('hidden');
             modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('info-modal');
+            if (event.target == modal) { closeModal(); }
         }
     </script>
 </body>
