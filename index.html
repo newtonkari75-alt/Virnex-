@@ -10,22 +10,36 @@
     <meta name="theme-color" content="#DC592B">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
+    <!-- Preconexão e DNS Prefetch -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Preload da Imagem Principal -->
     <link rel="preload" as="image" href="images/Virnex.png">
 
     <title>Virnex Diet™ | Official Information & Authorized Offers Portal</title>
     <meta name="description" content="Learn everything about Virnex Diet™, the natural formula for realistic weight management support. Fast shipping to EU. 73% discount today.">
     <link rel="canonical" href="https://virnex-diet.vercel.app/">
     
+    <!-- Geotargeting -->
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="x-default">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="de">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="fr">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="nl">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="es">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="it">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="sv">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="fi">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="da">
+
     <link rel="icon" type="image/png" href="images/favcon1.png">
 
-    <!-- Tracking Scripts -->
-    <script src="https://api.ornyxa.com/code/8300-c410881e-4fcd-4c0f-aa4d-040bbf49fd3f"></script>
+    <!-- Scripts de Rastreio -->
+    <script src="https://api.ornyxa.com/code/8300-d214cbcb-0052-464c-8b16-9673456c9265"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17879355180"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -52,13 +66,13 @@
         @keyframes pulse-soft { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
         .cta-pulse { animation: pulse-soft 2s infinite; }
 
-        /* Mobile First Hero Alignment */
+        /* Ajuste de Alinhamento Mobile-First para o Hero */
         @media (max-width: 1023px) {
             .hero-container { display: flex; flex-direction: column; }
             .hero-title { order: 1; text-align: center; }
-            .hero-image { order: 2; margin-top: 1rem; margin-bottom: 1.5rem; }
+            .hero-image { order: 2; margin-top: 1.5rem; margin-bottom: 1.5rem; }
             .hero-cta { order: 3; }
-            .hero-info { order: 4; margin-top: 1.5rem; }
+            .hero-info { order: 4; margin-top: 2rem; }
         }
     </style>
 </head>
@@ -86,7 +100,7 @@
                 </div>
             </div>
 
-            <!-- SUBSTITUIÇÃO DO TIMER POR BADGE DE SEGURANÇA (MAIS COMPLIANCE) -->
+            <!-- BARRA DE OFERTA COM PULSE -->
             <div class="bg-black text-white text-center py-2 px-4">
                 <p class="text-[10px] sm:text-[11px] font-black uppercase tracking-widest flex items-center justify-center gap-2">
                     <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -105,7 +119,7 @@
         </div>
 
         <!-- SEÇÃO HERO (MOBILE-FIRST) -->
-        <main class="px-5 pt-6 pb-12 lg:px-16 lg:py-20 hero-container lg:grid lg:grid-cols-12 gap-4 lg:gap-12 items-center">
+        <main class="px-5 pt-8 pb-12 lg:px-16 lg:py-20 hero-container lg:grid lg:grid-cols-12 gap-4 lg:gap-12 items-center">
             
             <!-- 1. TÍTULO -->
             <div class="lg:col-span-12 hero-title lg:mb-4">
@@ -120,12 +134,12 @@
 
             <!-- 2. IMAGEM -->
             <div class="lg:col-span-5 hero-image w-full">
-                <div class="relative max-w-[340px] lg:max-w-full mx-auto">
-                    <img src="images/Virnex.png" alt="Virnex Diet" class="w-full h-auto drop-shadow-2xl transform hover:scale-105 transition duration-500">
+                <div class="relative max-w-[360px] lg:max-w-full mx-auto">
+                    <img src="images/Virnex.png" alt="Suplemento Virnex Diet" class="w-full h-auto drop-shadow-2xl transform hover:scale-105 transition duration-500">
                 </div>
             </div>
 
-            <!-- 3. CTA E INFO -->
+            <!-- 3. BOTÃO E INFORMAÇÕES -->
             <div class="lg:col-span-7 hero-cta flex flex-col items-center lg:items-start w-full">
                 <p class="text-base lg:text-lg text-gray-600 mb-6 leading-relaxed text-center lg:text-left max-w-2xl" data-i18n="subheadline">
                     Virnex® is a carefully developed, plant-based formula designed for people who want a more realistic and controlled approach to weight management — <strong>without unrealistic promises.</strong>
@@ -157,7 +171,7 @@
             </div>
         </main>
 
-        <!-- SEÇÃO DE ESCOLHA (DTC VS QUIZ) -->
+        <!-- SEÇÃO DE ESCOLHA -->
         <section id="region-selector" class="py-16 px-5 bg-gray-50/50 border-y border-gray-100 scroll-mt-24">
             <div class="text-center mb-12">
                 <h2 class="text-3xl lg:text-4xl font-black mb-4 uppercase tracking-tight" data-i18n="choice-title">How do you want to proceed?</h2>
@@ -172,7 +186,7 @@
                         <div class="w-12 h-12 rounded-full bg-brand-primary/10 flex items-center justify-center">
                             <i class="fas fa-shopping-cart text-brand-primary text-xl"></i>
                         </div>
-                        <h3 class="text-xl font-black uppercase text-gray-900" data-i18n="opt1-title">1. Start the Program</h3>
+                        <h3 class="text-2xl font-black uppercase text-gray-900" data-i18n="opt1-title">1. Start the Program</h3>
                     </div>
                     <div class="flex-1">
                         <p class="text-gray-600 text-sm leading-relaxed mb-6" data-i18n="opt1-text">
@@ -189,14 +203,13 @@
                     </button>
                 </div>
 
-                <!-- OPÇÃO 2: QUIZ -->
-                <div class="bg-white rounded-3xl shadow-xl border-2 border-brand-primary p-8 flex flex-col transform transition hover:shadow-2xl relative">
-                    <div class="absolute -top-3 right-8 bg-brand-primary text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-md" data-i18n="badge-rec">Recommended</div>
+                <!-- OPÇÃO 2: QUIZ (REMOVIDO "RECOMENDADO") -->
+                <div class="bg-white rounded-3xl shadow-xl border border-gray-200 p-8 flex flex-col transform transition hover:shadow-2xl relative">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-12 h-12 rounded-full bg-brand-primary/10 flex items-center justify-center">
                             <i class="fas fa-clipboard-list text-brand-primary text-xl"></i>
                         </div>
-                        <h3 class="text-xl font-black uppercase text-gray-900" data-i18n="opt2-title">2. Check Compatibility</h3>
+                        <h3 class="text-2xl font-black uppercase text-gray-900" data-i18n="opt2-title">2. Check Compatibility</h3>
                     </div>
                     <div class="flex-1">
                         <p class="text-gray-600 text-sm leading-relaxed mb-6" data-i18n="opt2-text">
@@ -215,7 +228,7 @@
             </div>
         </section>
 
-        <!-- FOOTER -->
+        <!-- RODAPÉ -->
         <footer class="bg-white border-t border-gray-100 pt-12 pb-12 px-5 mt-auto text-center">
             <div class="max-w-5xl mx-auto">
                 <div class="mb-10">
@@ -225,7 +238,7 @@
                     <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Virnex Diet™ Partner Portal</p>
                 </div>
                 
-                <nav class="flex flex-wrap justify-center gap-3 md:gap-6 mb-10 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+                <nav class="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
                     <button onclick="openModal('envio')" data-i18n="nav-shipping">Shipping Policy</button>
                     <button onclick="openModal('termos')" data-i18n="nav-terms">Terms of Use</button>
                     <button onclick="openModal('privacidade')" data-i18n="nav-privacy">Privacy</button>
@@ -233,12 +246,13 @@
                 </nav>
 
                 <div class="max-w-4xl mx-auto text-[9px] text-gray-400 leading-relaxed space-y-4 mb-10">
-                    <p data-i18n="legal-1"><strong>Medical Disclaimer:</strong> Content on this site is for informational purposes and does not replace medical advice.</p>
+                    <p data-i18n="legal-1"><strong>Medical Disclaimer:</strong> Content on this site is for informational purposes and does not replace medical advice. Results vary by individual.</p>
                     <p><strong>Corporate Identity:</strong> VIVELLO SOLUTIONS LTD | Tax ID: GB-DE61BX | 7 Compton Street, Ashbourne, Derbyshire, UK, DE6 1BX | support@getvirnex.com</p>
                     <p class="pt-6 border-t border-gray-100 italic opacity-80" data-i18n="transparency-note">
                         <strong>Independent Info:</strong> This portal acts as an authorized partner and may be remunerated for sales referrals.
                     </p>
                 </div>
+
                 <div class="text-[9px] text-gray-400 uppercase tracking-tighter opacity-40">
                     © 2026 Virnex® Partner Network. Not part of Google Inc. or Facebook Inc.
                 </div>
@@ -284,13 +298,22 @@
                 "tag-authorized": "AUTORISIERTER PARTNER", "tag-shipping": "EU-VERSAND", "tag-guarantee": "60 TAGE GARANTIE",
                 "headline": "Wenn Gewichtsverlust frustrierend wird, <br class='hidden lg:block'> <span class='text-brand-primary underline decoration-gray-100'>verschwindet die Motivation.</span>",
                 "opt1-title": "1. Programm starten", "opt2-title": "2. Profil-Check: Passt Virnex® zu Ihnen?",
-                "btn-cta-hero": "Verfügbarkeit prüfen", "btn-opt1": "Zum offiziellen Shop", "btn-opt2": "Kostenloses Quiz starten"
+                "btn-cta-hero": "Verfügbarkeit prüfen", "btn-opt1": "Zum offiziellen Shop", "btn-opt2": "Kostenloses Quiz starten",
+                "choice-title": "Wie möchten Sie fortfahren?"
             },
             "fr": {
                 "tag-authorized": "PARTENAIRE AUTORISÉ", "tag-shipping": "LIVRAISON UE", "tag-guarantee": "GARANTIE 60 JOURS",
                 "headline": "Quand la perte de poids devient frustrante, <br class='hidden lg:block'> <span class='text-brand-primary underline decoration-gray-100'>la motivation disparaît.</span>",
                 "opt1-title": "1. Démarrer le programme", "opt2-title": "2. Virnex® est-il fait pour vous ?",
-                "btn-cta-hero": "Vérifier la disponibilité", "btn-opt1": "Boutique officielle", "btn-opt2": "Lancer o Quiz Gratuit"
+                "btn-cta-hero": "Vérifier la disponibilité", "btn-opt1": "Boutique officielle", "btn-opt2": "Lancer le Quiz Gratuit",
+                "choice-title": "Comment souhaitez-vous procéder ?"
+            },
+            "es": {
+                "tag-authorized": "SOCIO AUTORIZADO", "tag-shipping": "ENVÍO UE", "tag-guarantee": "60 DÍAS DE GARANTÍA",
+                "headline": "Cuando perder peso se vuelve frustrante, <br class='hidden lg:block'> <span class='text-brand-primary underline decoration-gray-100'>la motivación desaparece.</span>",
+                "opt1-title": "1. Iniciar el programa", "opt2-title": "2. ¿Es Virnex® adecuado para usted?",
+                "btn-cta-hero": "Consultar disponibilidade", "btn-opt1": "Ir a la tienda oficial", "btn-opt2": "Iniciar Quiz Gratis",
+                "choice-title": "¿Cómo deseja proceder?"
             }
         };
 
