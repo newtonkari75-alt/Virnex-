@@ -10,51 +10,25 @@
     <meta name="theme-color" content="#DC592B">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- Preconexão e DNS Prefetch -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Preload Hero Image -->
     <link rel="preload" as="image" href="images/Virnex.png">
 
     <title>Virnex Diet™ | Official Information & Authorized Offers Portal</title>
-    <meta name="description" content="Learn everything about Virnex Diet™, the natural formula for realistic weight management support. Fast shipping to EU. 73% discount today.">
-    <meta name="keywords" content="Virnex Diet, Virnex, weight management, natural supplement, Virnex buy, Virnex official, Virnex Europe">
-    <link rel="canonical" href="https://virnex-diet.vercel.app/">
+    <meta name="description" content="Learn everything about Virnex Diet™, the natural formula for realistic weight management support. Fast shipping to EU.">
     
-    <!-- Geotargeting (Hreflang para todos os países alvo) -->
+    <!-- Geotargeting -->
     <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="x-default">
-    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="de"> <!-- DE, AT, CH -->
-    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="fr"> <!-- FR, BE -->
-    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="nl"> <!-- NL, BE -->
-    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="es"> <!-- ES -->
-    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="it"> <!-- IT -->
-    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="sv"> <!-- SE -->
-    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="fi"> <!-- FI -->
-    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="da"> <!-- DK -->
-    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="en"> <!-- IE e Fallback -->
-
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Virnex Diet™",
-      "image": "https://virnex-diet.vercel.app/images/Virnex.png",
-      "description": "Plant-based formula designed for realistic and controlled weight management support.",
-      "brand": { "@type": "Brand", "name": "Virnex" },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "EUR",
-        "price": "49.00",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1250" }
-    }
-    </script>
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="de">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="fr">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="nl">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="es">
+    <link rel="alternate" href="https://virnex-diet.vercel.app/" hreflang="it">
 
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="images/favcon1.png">
@@ -80,20 +54,32 @@
         .border-brand-primary { border-color: #DC592B; }
         .hover-bg-brand-primary:hover { background-color: #c44d24; }
         html { scroll-behavior: smooth; }
+        
         .modal-body h1 { font-size: 1.5rem; font-weight: 900; margin-bottom: 1rem; color: #111; text-transform: uppercase; }
         .modal-body h2 { font-size: 1.25rem; font-weight: 800; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #DC592B; }
         .modal-body p { margin-bottom: 1rem; color: #444; line-height: 1.6; }
+        
         #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; z-index: 1000; box-shadow: 0 -5px 25px rgba(0,0,0,0.1); border-top: 3px solid #DC592B; transition: all 0.3s ease; }
+        
         @keyframes pulse-soft { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
         .cta-pulse { animation: pulse-soft 2s infinite; }
+
+        /* Ajuste fino para Mobile First Hero */
+        @media (max-width: 1023px) {
+            .hero-mobile-layout { display: flex; flex-direction: column; text-align: center; }
+            .hero-mobile-title { order: 1; }
+            .hero-mobile-image { order: 2; margin-top: 1.5rem; margin-bottom: 1.5rem; }
+            .hero-mobile-cta { order: 3; }
+            .hero-mobile-content { order: 4; margin-top: 2rem; }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
 
-    <!-- BANNER DE COOKIES (GDPR) -->
+    <!-- GDPR BANNER -->
     <div id="cookie-banner" class="p-4 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4 hidden">
         <div class="text-[10px] md:text-xs text-gray-600 max-w-4xl text-center md:text-left">
-            <span data-i18n="cookie-text">This informational portal uses cookies to optimize your experience. By continuing, you accept our</span> <button onclick="openModal('privacidade')" class="underline font-bold" data-i18n="nav-privacy">Privacy Policy</button>.
+            <span data-i18n="cookie-text">This informational portal uses cookies to optimize your experience and analyze traffic. By continuing, you accept our</span> <button onclick="openModal('privacidade')" class="underline font-bold" data-i18n="nav-privacy">Privacy Policy</button>.
         </div>
         <div class="flex gap-2 w-full md:w-auto">
             <button onclick="acceptCookies()" class="flex-1 md:flex-none bg-brand-primary text-white px-8 py-2 rounded-lg text-xs font-black uppercase tracking-widest shadow-lg" data-i18n="btn-accept">Accept and Continue</button>
@@ -104,7 +90,7 @@
         
         <!-- CABEÇALHO -->
         <div class="sticky top-0 z-50 w-full bg-white shadow-sm overflow-hidden">
-            <div class="bg-gray-50 py-1.5 px-2 border-b border-gray-100">
+            <div class="bg-gray-50 py-1.5 px-2 border-b border-gray-200">
                 <div class="flex justify-center items-center gap-4 md:gap-8 text-[10px] sm:text-xs font-bold text-gray-600 uppercase">
                     <div class="flex items-center gap-1.5"><i class="fas fa-check-circle text-brand-primary"></i> <span data-i18n="tag-authorized">AUTHORIZED PARTNER</span></div>
                     <div class="flex items-center gap-1.5"><i class="fas fa-truck text-brand-primary"></i> <span data-i18n="tag-shipping">EU SHIPPING</span></div>
@@ -129,64 +115,74 @@
             </header>
         </div>
 
-        <!-- SEÇÃO HERO -->
-        <main class="px-5 pt-8 pb-12 lg:px-16 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div class="lg:col-span-5 order-2 lg:order-1">
-                <div class="relative max-w-[420px] mx-auto lg:max-w-full">
-                    <img src="images/Virnex.png" alt="Virnex Diet Supplement" class="w-full h-auto drop-shadow-2xl">
-                </div>
-            </div>
-
-            <div class="lg:col-span-7 order-1 lg:order-2 text-center lg:text-left">
+        <!-- SEÇÃO HERO (MOBILE FIRST ORDER) -->
+        <main class="px-5 pt-8 pb-12 lg:px-16 lg:py-20 flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-12 items-center">
+            
+            <!-- 1. TÍTULO (Topo no Mobile) -->
+            <div class="lg:col-span-12 hero-mobile-title text-center lg:text-left lg:mb-2">
                 <div class="inline-flex items-center bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-[10px] font-bold mb-4 border border-gray-200 uppercase tracking-wide">
                     <i class="fas fa-shield-alt mr-2 text-brand-primary"></i> <span data-i18n="trust-signal">Verified Content · Independent Portal</span>
                 </div>
                 
-                <h1 class="text-3xl lg:text-5xl font-black leading-tight text-gray-900 mb-6 tracking-tight" data-i18n="headline">
+                <h1 class="text-3xl lg:text-5xl font-black leading-tight text-gray-900 tracking-tight" data-i18n="headline">
                     When Weight Loss Becomes Frustrating, <br class="hidden lg:block"> <span class="text-brand-primary underline decoration-gray-100">Motivation Disappears.</span>
                 </h1>
+            </div>
 
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0" data-i18n="subheadline">
+            <!-- 2. IMAGEM (Segunda no Mobile) -->
+            <div class="lg:col-span-5 hero-mobile-image w-full">
+                <div class="relative max-w-[380px] lg:max-w-full mx-auto">
+                    <img src="images/Virnex.png" alt="Suplemento Virnex Diet" class="w-full h-auto drop-shadow-2xl transform hover:scale-105 transition duration-500">
+                </div>
+            </div>
+
+            <!-- 3. BOTÃO E MAIS INFORMAÇÕES (Terceiro no Mobile) -->
+            <div class="lg:col-span-7 hero-mobile-cta flex flex-col items-center lg:items-start w-full">
+                <p class="text-base lg:text-lg text-gray-600 mb-6 leading-relaxed text-center lg:text-left max-w-2xl" data-i18n="subheadline">
                     Virnex® is a carefully developed, plant-based formula designed for people who want a more realistic and controlled approach to weight management — <strong>without unrealistic promises.</strong>
                 </p>
 
-                <ul class="space-y-4 mb-10 text-left max-w-md mx-auto lg:mx-0">
+                <!-- BOTÃO PRINCIPAL EM DESTAQUE -->
+                <button onclick="scrollToSelector()" class="w-full lg:w-auto bg-brand-primary text-white px-10 py-5 rounded-2xl text-lg lg:text-xl font-black shadow-xl cta-pulse hover-bg-brand-primary transition uppercase tracking-tight flex items-center justify-center gap-3">
+                    <span data-i18n="btn-cta-hero">Check availability on official site</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <p class="mt-4 text-[10px] text-gray-400 italic text-center lg:text-left" data-i18n="disclaimer-hero">*Results vary by individual and depend on adoption of healthy habits.</p>
+
+                <!-- BULLETS (Abaixo do Botão no Mobile para não distanciar o CTA do topo) -->
+                <ul class="space-y-3 mt-8 text-left w-full max-w-md">
                     <li class="flex items-start gap-3 text-gray-700">
-                        <i class="fas fa-check-circle text-brand-primary mt-1"></i>
-                        <span class="text-sm" data-i18n="bullet-1">Supports sustainable weight management*</span>
+                        <i class="fas fa-check-circle text-brand-primary mt-1 flex-shrink-0"></i>
+                        <span class="text-sm font-medium" data-i18n="bullet-1">Supports sustainable weight management*</span>
                     </li>
                     <li class="flex items-start gap-3 text-gray-700">
-                        <i class="fas fa-check-circle text-brand-primary mt-1"></i>
-                        <span class="text-sm" data-i18n="bullet-2">Produced under strict quality standards in Germany</span>
+                        <i class="fas fa-check-circle text-brand-primary mt-1 flex-shrink-0"></i>
+                        <span class="text-sm font-medium" data-i18n="bullet-2">Produced under strict quality standards in Germany</span>
                     </li>
                     <li class="flex items-start gap-3 text-gray-700">
-                        <i class="fas fa-check-circle text-brand-primary mt-1"></i>
-                        <span class="text-sm" data-i18n="bullet-3">Satisfaction guarantee protected by the manufacturer</span>
+                        <i class="fas fa-check-circle text-brand-primary mt-1 flex-shrink-0"></i>
+                        <span class="text-sm font-medium" data-i18n="bullet-3">Satisfaction guarantee protected by the manufacturer</span>
                     </li>
                 </ul>
-
-                <button onclick="scrollToSelector()" class="w-full lg:w-auto bg-brand-primary text-white px-12 py-5 rounded-xl text-xl font-black shadow-xl cta-pulse hover-bg-brand-primary transition uppercase tracking-tight">
-                    <span data-i18n="btn-cta-hero">Check availability on official site</span>
-                    <i class="fas fa-chevron-right ml-2"></i>
-                </button>
-                <p class="mt-4 text-[10px] text-gray-400 italic" data-i18n="disclaimer-hero">*Results vary by individual and depend on adoption of healthy habits.</p>
             </div>
         </main>
 
         <!-- DECISION SECTION (DTC VS QUIZ) -->
-        <section id="region-selector" class="py-20 px-5 bg-gray-50/50 border-y border-gray-100">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black mb-4 uppercase tracking-tight" data-i18n="choice-title">How do you want to proceed?</h2>
+        <section id="region-selector" class="py-16 px-5 bg-gray-50/50 border-y border-gray-100 scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-black mb-4 uppercase tracking-tight" data-i18n="choice-title">How do you want to proceed?</h2>
                 <p class="text-gray-500 font-medium max-w-2xl mx-auto" data-i18n="choice-subtitle">Select the path that best fits your current needs.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- DTC -->
                 <div class="bg-white rounded-3xl shadow-xl border border-gray-200 p-8 flex flex-col transform transition hover:shadow-2xl">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-12 h-12 rounded-full bg-brand-primary/10 flex items-center justify-center">
                             <i class="fas fa-shopping-cart text-brand-primary text-xl"></i>
                         </div>
-                        <h3 class="text-2xl font-black uppercase text-gray-900" data-i18n="opt1-title">1. Direct Access</h3>
+                        <h3 class="text-xl font-black uppercase text-gray-900" data-i18n="opt1-title">1. Direct Access</h3>
                     </div>
                     <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-1" data-i18n="opt1-text">
                         Choose this option if you already know the benefits of Virnex® and want to secure the maximum 73% discount. You will be redirected to the official checkout.
@@ -196,13 +192,14 @@
                     </button>
                 </div>
 
+                <!-- QUIZ -->
                 <div class="bg-white rounded-3xl shadow-xl border-2 border-brand-primary p-8 flex flex-col transform transition hover:shadow-2xl relative">
                     <div class="absolute -top-3 right-8 bg-brand-primary text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-md" data-i18n="badge-rec">Recommended</div>
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-12 h-12 rounded-full bg-brand-primary/10 flex items-center justify-center">
                             <i class="fas fa-clipboard-list text-brand-primary text-xl"></i>
                         </div>
-                        <h3 class="text-2xl font-black uppercase text-gray-900" data-i18n="opt2-title">2. Profile Assessment</h3>
+                        <h3 class="text-xl font-black uppercase text-gray-900" data-i18n="opt2-title">2. Profile Assessment</h3>
                     </div>
                     <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-1" data-i18n="opt2-text">
                         Still have questions? This short 90-second quiz determines if Virnex® is the right solution for your goals. No obligation to buy.
@@ -215,8 +212,8 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="bg-white border-t border-gray-100 pt-12 pb-12 px-5 mt-auto">
-            <div class="max-w-5xl mx-auto text-center">
+        <footer class="bg-white border-t border-gray-100 pt-12 pb-12 px-5 mt-auto text-center">
+            <div class="max-w-5xl mx-auto">
                 <div class="mb-10">
                     <div class="inline-block p-4 bg-brand-primary rounded-xl mb-2">
                         <img src="images/Virnex_logo.png" alt="Virnex" class="h-6 mx-auto">
@@ -224,7 +221,7 @@
                     <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Virnex Diet™ Partner Portal</p>
                 </div>
                 
-                <nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 text-[11px] font-bold text-gray-500 uppercase tracking-widest">
+                <nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
                     <button onclick="openModal('envio')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary transition" data-i18n="nav-shipping">Shipping Policy</button>
                     <button onclick="openModal('termos')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary transition" data-i18n="nav-terms">Terms of Use</button>
                     <button onclick="openModal('privacidade')" class="px-4 py-2 bg-gray-50 rounded-lg hover:text-brand-primary transition" data-i18n="nav-privacy">Privacy</button>
@@ -239,8 +236,8 @@
                     </p>
                 </div>
 
-                <div class="text-[9px] text-gray-400 uppercase tracking-tighter opacity-60">
-                    © 2026 Virnex® Partner Network. This site is not part of Google Inc. or Facebook Inc.
+                <div class="text-[9px] text-gray-400 uppercase tracking-tighter opacity-40">
+                    © 2026 Virnex® Partner Network. Not part of Google Inc. or Facebook Inc.
                 </div>
             </div>
         </footer>
@@ -257,7 +254,6 @@
     </div>
 
     <script>
-        // CONFIGURAÇÃO DOS LINKS OFICIAIS
         const DTC_URL = "https://www.knownwalk.com/2JCZKZ1X/22C9J7CF/";
         const VSL_URL = "https://www.knownwalk.com/2JCZKZ1X/22CBX442/";
 
@@ -269,7 +265,7 @@
                 "tag-authorized": "AUTORISIERTER PARTNER", "tag-shipping": "EU-VERSAND", "tag-guarantee": "60 TAGE GARANTIE", "banner-offer": "BEGRENZTES ANGEBOT: 73% RABATT AUF DER OFFIZIELLEN SEITE", "btn-check-offers": "Angebote prüfen", "trust-signal": "Geprüfter Inhalt · Unabhängiges Portal", "headline": "Wenn Gewichtsverlust frustrierend wird, <br class='hidden lg:block'> <span class='text-brand-primary underline decoration-gray-100'>verschwindet die Motivation.</span>", "subheadline": "Virnex® ist eine pflanzliche Formel für ein realistisches Gewichtsmanagement — <strong>ohne falsche Versprechungen.</strong>", "bullet-1": "Unterstützt nachhaltiges Gewichtsmanagement*", "bullet-2": "Hergestellt nach strengen deutschen Qualitätsstandards", "bullet-3": "Zufriedenheitsgarantie direkt vom Hersteller", "btn-cta-hero": "Verfügbarkeit auf der offiziellen Seite prüfen", "disclaimer-hero": "*Ergebnisse hängen von individuellen Gewohnheiten ab.", "choice-title": "Wie möchten Sie fortfahren?", "choice-subtitle": "Wählen Sie den Pfad, der am besten zu Ihnen passt.", "opt1-title": "1. Direkter Zugang", "opt1-text": "Wählen Sie diese Option, wenn Sie Virnex® bereits kennen und sich den Rabatt sichern möchten.", "btn-opt1": "Zur offiziellen Seite", "badge-rec": "Empfohlen", "opt2-title": "2. Profil-Check", "opt2-text": "Haben Sie noch Fragen? Dieser kurze Quiz zeigt, ob Virnex® für Sie geeignet ist.", "btn-opt2": "Kostenloses Quiz starten", "nav-shipping": "Versandbedingungen", "nav-terms": "Nutzungsbedingungen", "nav-privacy": "Datenschutz", "nav-support": "Support", "legal-1": "<strong>Medizinischer Haftungsausschluss:</strong> Diese Inhalte ersetzen keine ärztliche Beratung.", "transparency-note": "<strong>Unabhängige Info:</strong> Dieses Portal ist Partner und erhält ggf. Provisionen.", "cookie-text": "Dieses Portal nutzt Cookies. Durch Fortfahren akzeptieren Sie unsere", "btn-accept": "Akzeptieren", "btn-modal-close": "Verstanden"
             },
             "fr": {
-                "tag-authorized": "PARTENAIRE AUTORISÉ", "tag-shipping": "LIVRAISON UE", "tag-guarantee": "GARANTIE 60 JOURS", "banner-offer": "OFFRE LIMITÉE : 73% DE RÉDUCTION SUR LE SITE OFFICIEL", "btn-check-offers": "Voir les offres", "trust-signal": "Contenu Vérifié · Portail Indépendant", "headline": "Quand la perte de poids devient frustrante, <br class='hidden lg:block'> <span class='text-brand-primary underline decoration-gray-100'>la motivation disparaît.</span>", "subheadline": "Virnex® est une formule à base de plantes pour une gestion du poids réaliste — <strong>sans promesses irréalistes.</strong>", "bullet-1": "Soutient la gestion durable du poids*", "bullet-2": "Produit selon des normes strictes en Allemagne", "bullet-3": "Garantie de satisfaction par le fabricant", "btn-cta-hero": "Vérifier la disponibilité sur le site officiel", "disclaimer-hero": "*Les résultats varient selon les individus.", "choice-title": "Comment souhaitez-vous procéder ?", "choice-subtitle": "Sélectionnez le chemin qui vous convient le mieux.", "opt1-title": "1. Accès Direct", "opt1-text": "Choisissez cette option si vous connaissez déjà Virnex® et voulez profiter de la remise.", "btn-opt1": "Aller sur le site officiel", "badge-rec": "Recommandé", "opt2-title": "2. Évaluation de profil", "opt2-text": "Des questions ? Ce quiz de 90 secondes détermine se Virnex® vous correspond.", "btn-opt2": "Lancer le Quiz Gratuit", "nav-shipping": "Livraison", "nav-terms": "Conditions", "nav-privacy": "Confidentialité", "nav-support": "Support", "legal-1": "<strong>Avis médical:</strong> Le contenu ne remplace pas un avis médical.", "transparency-note": "<strong>Info indépendante:</strong> Ce portail est un partenaire et peut être rémunéré.", "cookie-text": "Ce portail utilise des cookies. En continuant, vous acceptez notre", "btn-accept": "Accepter", "btn-modal-close": "Compris"
+                "tag-authorized": "PARTENAIRE AUTORISÉ", "tag-shipping": "LIVRAISON UE", "tag-guarantee": "GARANTIE 60 JOURS", "banner-offer": "OFFRE LIMITÉE : 73% DE RÉDUCTION SUR LE SITE OFFICIEL", "btn-check-offers": "Voir les offres", "trust-signal": "Contenu Vérifié · Portail Indépendant", "headline": "Quand la perte de poids devient frustrante, <br class='hidden lg:block'> <span class='text-brand-primary underline decoration-gray-100'>la motivation disparaît.</span>", "subheadline": "Virnex® est une formule à base de plantes pour une gestion du poids réaliste — <strong>sans promesses irréalistes.</strong>", "bullet-1": "Soutient la gestion durable du poids*", "bullet-2": "Produit selon des normes strictes en Allemagne", "bullet-3": "Garantie de satisfaction par le fabricant", "btn-cta-hero": "Vérifier la disponibilité sur le site officiel", "disclaimer-hero": "*Les résultats varient selon les individus.", "choice-title": "Comment souhaitez-vous procéder ?", "choice-subtitle": "Sélectionnez le chemin qui vous convient le mieux.", "opt1-title": "1. Accès Direct", "opt1-text": "Choisissez cette option si vous connaissez déjà Virnex® et voulez profiter de la remise.", "btn-opt1": "Aller sur le site officiel", "badge-rec": "Recommandé", "opt2-title": "2. Évaluation de profil", "opt2-text": "Des questions ? Ce quiz de 90 secondes détermine se Virnex® vous correspond.", "btn-opt2": "Lancer le Quiz Gratuit", "nav-shipping": "Livraison", "nav-terms": "Conditions", "nav-privacy": "Confidentialité", "nav-support": "Support", "legal-1": "<strong>Avis médical:</strong> Le conteúdo não substitui um conselho médico.", "transparency-note": "<strong>Info indépendante:</strong> Ce portail est um partenaire et peut être rémunéré.", "cookie-text": "Ce portail utilise des cookies. En continuant, vous acceptez notre", "btn-accept": "Accepter", "btn-modal-close": "Compris"
             },
             "nl": {
                 "tag-authorized": "GEAUTORISEERDE PARTNER", "tag-shipping": "EU VERZENDING", "tag-guarantee": "60 DAGEN GARANTIE", "headline": "Wanneer gewichtsverlies frustrerend wordt, <br class='hidden lg:block'> <span class='text-brand-primary underline decoration-gray-100'>verdwijnt de motivatie.</span>", "btn-cta-hero": "Controleer beschikbaarheid op de officiële site", "btn-opt1": "Ga naar de officiële site", "btn-opt2": "Start Gratis Quiz", "choice-title": "Hoe wilt u verder gaan?"
