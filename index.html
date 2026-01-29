@@ -142,37 +142,64 @@
             </div>
         </main>
 
-        <!-- SEÇÃO DE ESCOLHA -->
+        <!-- SEÇÃO DE ESCOLHA (DTC VS QUIZ) - MELHORADA -->
         <section id="region-selector" class="py-20 px-5 bg-gray-50/50 border-y border-gray-100">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Qual o seu objetivo hoje?</h2>
-                <p class="text-gray-500 font-medium">Fornecemos clareza para que sua decisão seja bem informada.</p>
+                <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Como deseja prosseguir?</h2>
+                <p class="text-gray-500 font-medium max-w-2xl mx-auto">Selecione o caminho que melhor se adapta à sua necessidade atual para garantirmos a melhor experiência.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white rounded-3xl shadow-xl border border-gray-200 p-8 flex flex-col">
-                    <h3 class="text-xl font-black mb-4 uppercase">1. Ir para a Loja Oficial</h3>
-                    <p class="text-gray-600 text-sm mb-8 flex-1 italic">
-                        "Já conheço o produto e quero garantir o desconto de 73% diretamente no site seguro do fabricante."
+                
+                <!-- OPÇÃO 1: COMPRA DIRETA (DTC) -->
+                <div class="bg-white rounded-3xl shadow-xl border border-gray-200 p-8 flex flex-col transform transition hover:shadow-2xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-brand-primary/10 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-brand-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-gray-900">1. Acesso Direto</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-1">
+                        Escolha esta opção se já conhece os benefícios do Virnex® e deseja garantir o <strong>desconto máximo de 73%</strong> sem passos adicionais. Será redirecionado de forma segura para o portal oficial de finalização de compra.
                     </p>
-                    <button onclick="goToOffer()" class="w-full bg-brand-primary text-white py-4 rounded-xl font-black text-lg uppercase shadow-md">
-                        Acessar Site Oficial
+                    <ul class="mb-8 space-y-2 text-xs text-gray-500 font-bold uppercase tracking-tighter">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-primary"></i> Desconto de 73% aplicado</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-primary"></i> Check-out seguro e encriptado</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-primary"></i> Envio prioritário na UE</li>
+                    </ul>
+                    <button onclick="goToOffer()" class="w-full bg-brand-primary text-white py-5 rounded-2xl font-black text-lg uppercase shadow-lg hover-bg-brand-primary transition">
+                        Ver Ofertas no Site Oficial
                     </button>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-xl border-2 border-brand-primary p-8 flex flex-col">
-                    <h3 class="text-xl font-black mb-4 uppercase">2. Avaliação de Compatibilidade</h3>
-                    <p class="text-gray-600 text-sm mb-8 flex-1 italic">
-                        "Quero entender se a fórmula Virnex® realmente se encaixa no meu estilo de vida antes de tomar uma decisão."
+                <!-- OPÇÃO 2: QUIZ / DECISÃO GUIADA -->
+                <div class="bg-white rounded-3xl shadow-xl border-2 border-brand-primary p-8 flex flex-col transform transition hover:shadow-2xl relative">
+                    <!-- Badge de Recomendado para novos usuários -->
+                    <div class="absolute -top-3 right-8 bg-brand-primary text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-md">
+                        Recomendado
+                    </div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-brand-primary/10 flex items-center justify-center">
+                            <i class="fas fa-clipboard-list text-brand-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-gray-900">2. Avaliação de Perfil</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-1">
+                        Ainda tem dúvidas? Este breve questionário de <strong>90 segundos</strong> analisa os seus objetivos e rotina para determinar se a fórmula Virnex® é a solução ideal para si. Receba uma recomendação personalizada, sem compromisso de compra.
                     </p>
-                    <button onclick="goToInfo()" class="w-full border-2 border-brand-primary text-brand-primary py-4 rounded-xl font-black text-lg uppercase">
-                        Iniciar Quiz Grátis
+                    <ul class="mb-8 space-y-2 text-xs text-gray-500 font-bold uppercase tracking-tighter">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-primary"></i> Análise personalizada</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-primary"></i> Sem obrigação de compra</li>
+                        <li class="fas flex items-center gap-2"><i class="fas fa-check text-brand-primary"></i> Decisão informada e segura</li>
+                    </ul>
+                    <button onclick="goToInfo()" class="w-full border-2 border-brand-primary text-brand-primary py-5 rounded-2xl font-black text-lg uppercase hover:bg-brand-primary/5 transition">
+                        Iniciar Quiz Gratuito
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- RODAPÉ EEAT (TRANSPARÊNCIA TOTAL) -->
+        <!-- RODAPÉ EEAT -->
         <footer class="bg-white border-t border-gray-100 pt-12 pb-12 px-5 mt-auto">
             <div class="max-w-5xl mx-auto text-center">
                 
@@ -194,7 +221,6 @@
                     <p><strong>Aviso Legal:</strong> O conteúdo deste site possui fins informativos e não substitui aconselhamento médico. Resultados variam conforme hábitos individuais. As informações apresentadas não diagnosticam ou curam doenças.</p>
                     <p><strong>Identidade Jurídica:</strong> VIVELLO SOLUTIONS LTD | Tax ID: GB-DE61BX | 7 Compton Street, Ashbourne, Derbyshire, Reino Unido, DE6 1BX | support@getvirnex.com</p>
                     
-                    <!-- NOTA DE TRANSPARÊNCIA SIMPLIFICADA E REPOSICIONADA -->
                     <p class="pt-6 border-t border-gray-100 italic opacity-80">
                         <strong>Informativo Independente:</strong> Este portal atua como parceiro autorizado e pode ser remunerado por indicações de vendas, o que permite manter nossas pesquisas e ofertas sem custo adicional para o usuário.
                     </p>
